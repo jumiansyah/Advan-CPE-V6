@@ -56,7 +56,7 @@ mount -o remount,rw /
 mkdir -p /home/mod/install
 cd /home/mod/install
 
-wget -O tzwww.tar.gz "https://raw.githubusercontent.com/shiwildy/Advan-CPE-V6/main/resources/1.0.5.tar.gz"
+wget -O tzwww.tar.gz "https://raw.githubusercontent.com/shiwildy/Advan-CPE-V6/main/resources/tzwww.tar.gz"
 tar -xzf tzwww.tar.gz
 
 # optional backup
