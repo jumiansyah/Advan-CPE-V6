@@ -28,7 +28,7 @@ WebUI modding kit for **Advan CPE V6**.
 ### 1. Install WebSpy
 Download and install:
 
-`https://raw.githubusercontent.com/shiwildy/Advan-CPE-V6/main/helper/webspy.zip`
+`https://raw.githubusercontent.com/jumiansyah/Advan-CPE-V6/main/helper/webspy.zip`
 
 ### 2. Get `sessionId`
 Log in to WebUI and capture `sessionId` from the login request in WebSpy.
@@ -42,7 +42,7 @@ Send this POST payload (replace `YOUR_SESSION_ID`):
   "method": "POST",
   "subcmd": 1,
   "stopped": "0",
-  "if": "br0$(wget -qO- https://raw.githubusercontent.com/shiwildy/Advan-CPE-V6/main/script/telnet.sh | sh >/tmp/telnet.txt 2>&1; :)",
+  "if": "br0$(wget -qO- https://raw.githubusercontent.com/jumiansyah/Advan-CPE-V6/main/script/telnet.sh | sh >/tmp/telnet.txt 2>&1; :)",
   "language": "EN",
   "sessionId": "xxxxxxxxxxxxxxxxx"
 }
@@ -56,7 +56,7 @@ mount -o remount,rw /
 mkdir -p /home/mod/install
 cd /home/mod/install
 
-wget -O tzwww.tar.gz "https://raw.githubusercontent.com/shiwildy/Advan-CPE-V6/main/resources/tzwww.tar.gz"
+wget -O tzwww.tar.gz "https://raw.githubusercontent.com/jumiansyah/Advan-CPE-V6/main/resources/tzwww.tar.gz"
 tar -xzf tzwww.tar.gz
 
 # optional backup
@@ -76,7 +76,7 @@ This script installs `/etc/init.d/modwebextra` and links it to `/etc/rcS.d/S98mo
 ```bash
 cd /home/mod/install
 mkdir script && cd script
-wget -O /home/mod/install/script/daemon.sh "https://raw.githubusercontent.com/shiwildy/Advan-CPE-V6/main/script/daemon.sh"
+wget -O /home/mod/install/script/daemon.sh "https://raw.githubusercontent.com/jumiansyah/Advan-CPE-V6/main/script/daemon.sh"
 sh /home/mod/install/script/daemon.sh
 ```
 
@@ -101,7 +101,7 @@ Package file: `helper/vnstat.tar.gz`
 ```bash
 mkdir -p /home && cd /home
 
-wget -O vnstat.tar.gz "https://raw.githubusercontent.com/shiwildy/Advan-CPE-V6/main/helper/vnstat.tar.gz"
+wget -O vnstat.tar.gz "https://raw.githubusercontent.com/jumiansyah/Advan-CPE-V6/main/helper/vnstat.tar.gz"
 tar -xzf vnstat.tar.gz
 
 chmod +x /home/vnstat/*.sh /home/vnstat/bin/vnstat /home/vnstat/lib/ld-linux.so.3
